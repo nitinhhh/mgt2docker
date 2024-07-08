@@ -202,7 +202,7 @@ Overwrite the base url
 
 ```json
 {
-  "MAGENTO2_BASE_URL": "https://demoshops.splendid-internet.de/magento/demoshop-magento2-daily"
+  "MAGENTO2_BASE_URL": "https://test01.snushof.ch/"
 }
 ```
 
@@ -299,15 +299,3 @@ https://user-images.githubusercontent.com/431360/193906780-8e2e62ce-23db-406c-82
 https://user-images.githubusercontent.com/431360/193906808-f0a04467-72d4-4ef4-a1f4-e05de8f16252.mp4
 
 <p align="center"><em><a href="https://github.com/elgentos/magento2-cypress-testing-suite/blob/main/cypress/integration/hyva/search/product-searches.spec.js">product-searches.spec.js</a> tests running on https://hyva-demo.elgentos.io</em></p>
-
-## Contributing
-
-We are very open to contributions! We would love to have mobile viewport support for Hyvä, tests for Commerce functionality, additional tests, code improvements, a fallback mechanism, etcetera etcetera. See the Issues tab for issues to pick up.
-
-We will be updating this readme soon with extensive contribution guidelines, but here is a short summary:
-
-- Avoid creating global `cy` functions ([Custom Commands](https://docs.cypress.io/api/cypress-api/custom-commands)), instead put functions in utils/helpers and import them
-- Avoid creating [aliases](https://docs.cypress.io/guides/core-concepts/variables-and-aliases#Aliases) that are only used once
-- Use `cy.get()` as much as possible, only use `cy.contains()` in specific cases - try to avoid it
-- Do not add assertions to page objects, move those to the spec files. Red flag; `should()` in a page object
-- Every test (an `it()` function) has to be able to run stand-alone; it should not depend on any other test. You can test this by add `.only` (see [Cypress docs](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests#Excluding-and-Including-Tests)).
